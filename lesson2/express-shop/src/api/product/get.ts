@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { productRepository } from '../../helpers/file-repository';
+import { productRepository } from '../../helpers/repository';
 
 export const getProducts = async (req, res) => {
   const products = await productRepository.getEntities(true);

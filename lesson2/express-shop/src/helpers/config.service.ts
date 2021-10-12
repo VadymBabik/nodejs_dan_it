@@ -1,5 +1,9 @@
 import { config } from 'dotenv';
 
+/**
+ * @description
+ * Service-wrapper for interaction with environment variables.
+ */
 class ConfigService {
   constructor() {
     config();

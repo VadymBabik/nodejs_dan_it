@@ -1,10 +1,10 @@
 import express from 'express';
-import { registerApi } from './api/index';
+import { registerRouters } from './api/index';
 import ConfigService from './helpers/config.service';
 
 let app = express();
 
-registerApi(app);
+registerRouters(app);
 
 const port = ConfigService.get<number>('APP_PORT') || 8000;
 

@@ -3,7 +3,11 @@ import { writeFile, readFile } from 'fs/promises';
 import path from 'path';
 import { Product } from '../entities/product.entity';
 
-class FileRepository<T extends { id: string }> {
+/**
+ * @description
+ * Service for data access - saving data in/load data from  JSON-file
+ */
+class Repository<T extends { id: string }> {
   private entities: T[];
 
   constructor(private readonly pathToFile: string) {
@@ -68,10 +72,10 @@ class FileRepository<T extends { id: string }> {
   }
 }
 
-export const productRepository = new FileRepository<Product>(
+export const productRepository = new Repository<Product>(
   path.join(__dirname, '../data/products.json')
 );
 
-export const userRepository = new FileRepository<User>(
+export const userRepository = new Repository<User>(
   path.join(__dirname, '../data/users.json')
 );

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { productRepository } from '../../helpers/file-repository';
+import { productRepository } from '../../helpers/repository';
 
 export const createProduct = async (req: Request, res: Response) => {
   const { name, price } = req.body;
