@@ -37,3 +37,18 @@ Promise.resolve()
   .then(() => console.log('end 2'));
 
 console.log('Sync code end');
+
+`sync code start
+sync code end
+promise 1
+end 1
+promise 2
+end 2
+setInterval
+setTimeout 1
+promise 3
+promise 4
+setInterval
+setTimeout 2
+promise 5
+promise 6`;

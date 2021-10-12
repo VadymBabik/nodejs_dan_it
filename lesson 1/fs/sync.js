@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 exports.read = (path) => {
   const data = fs.readFileSync(path, 'utf8');
 
@@ -7,7 +9,7 @@ exports.read = (path) => {
 };
 
 exports.write = (path, content) => {
-  const data = fs.writeFile(path, content);
+  const data = fs.writeFileSync(path, content);
 
   return data;
 };
